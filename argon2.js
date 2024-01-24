@@ -11,7 +11,7 @@ const { hash: _hash } = require(bindingPath);
 
 const bindingsHash = promisify(_hash);
 
-/** @type {(size: number) => Promise<Buffer>} */
+/ ! @type {(size: number) => Promise<Buffer>} */
 const generateSalt = promisify(randomBytes);
 
 /** @enum {0 | 1 | 2} */
@@ -164,3 +164,4 @@ async function verify(digest, plain, options) {
 }
 
 module.exports = { defaults, hash, needsRehash, verify, ...types };
+ 
